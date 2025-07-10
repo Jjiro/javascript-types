@@ -28,3 +28,41 @@ console.log("amount", typeof amount);
 
 amount = "Eight";
 console.log("amount", typeof amount);
+
+/*https://codesandbox.io/s/type-annotations-1xgsj*/
+
+/*let score: number;
+score = "ten"; */
+
+function add(a: number, b: number): number {
+  return a + b;
+}
+console.log(add);
+
+const minus = function (a: number, b: number): number {
+  return a - b;
+};
+console.log(minus);
+
+const multiply = (a: number, b: number): number => a * b;
+console.log(multiply);
+
+function divideTS(a: number, b: number): number {
+  return a / b;
+}
+console.log(divideTS);
+
+function divideJS(a, b) {
+  return a / b;
+}
+console.log(divideJS);
+
+/* Making B paprameter optional */
+function add(a: number, b?: number): number {
+  return a + b;
+}
+
+/** Resolvong the above issue for TS */
+function add(a: number, b?: number): number {
+  return a + (b || 0);
+}
